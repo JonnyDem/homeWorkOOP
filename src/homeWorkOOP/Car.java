@@ -10,6 +10,8 @@ public class Car {
     String number;
     String color;
     String marka;
+    private static int countOfCars = 0;
+
     int countHuman=0;
 
     boolean start;
@@ -98,6 +100,10 @@ public class Car {
                         break;
                 }
             }
+            public static int getCountCars(){
+                System.out.println("Count of cars: "+countOfCars);
+                return countOfCars;
+            }
 
     public Car() {
 
@@ -119,6 +125,7 @@ public class Car {
         this.number = number;
         this.color = color;
         this.marka = marka;
+        countOfCars+=1;
     }
 
         }

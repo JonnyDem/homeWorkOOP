@@ -39,6 +39,8 @@ public class MainCar {
         }
 
 
+         car1.getCountCars();
+         Car.getCountCars();
 
 
 
