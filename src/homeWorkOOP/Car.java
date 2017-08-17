@@ -10,6 +10,8 @@ public class Car {
     String number;
     String color;
     String marka;
+
+   Track track;
     private static int countOfCars = 0;
 
     int countHuman=0;
@@ -19,8 +21,36 @@ public class Car {
     boolean stop;
 
 
+
+
     public void printAboutMe(){
         System.out.println(number+", "+color+", "+ marka+", count of passangers: "+countHuman);
+    }
+
+
+    public void setTrack(Track tr) {
+        if(track==null){
+            track = tr;
+            if(track.car==null) {
+                System.out.println("The car " + number + " hooks up the track " + track.number);
+                track.linkToCar(this);
+            } else{
+                System.out.println("This track "+track.number+" has already linked to car "+track.car.number);
+                track=null;
+            }
+        }
+        else{
+            System.out.println("This car already has track: "+track.number);
+        }
+    }
+    public void unSetTrack() {
+        if (track != null) {
+            track.unLinkFromCar();
+            System.out.println("The car " + number + " unlocked track "+track.number);
+            track = null;
+        } else {
+            System.out.println("The car " + number + " is already without track ");
+        }
     }
 
     public void setColor(String color) {

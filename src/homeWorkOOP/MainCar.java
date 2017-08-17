@@ -14,6 +14,9 @@ public class MainCar {
         Car car2=new Car("CC 3333");
         Car car3=new Car("BB 2222","Red");
         Car car4=new Car("AA 1457 KK","Black","Geely");
+        Track track1=new Track("12-34");
+        Track track2=new Track("15-67");
+
 
         car1.printAboutMe();
         car2.printAboutMe();
@@ -41,6 +44,19 @@ public class MainCar {
 
          car1.getCountCars();
          Car.getCountCars();
+
+        car1.setTrack(track1);
+        car1.setTrack(track2);
+       car2.setTrack(track1);
+        car2.setTrack(track2);
+
+        System.out.println();
+        car2.unSetTrack();
+        car1.unSetTrack();
+        System.out.println();
+        car1.setTrack(track2);
+
+
 
 
 

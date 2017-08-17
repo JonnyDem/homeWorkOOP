@@ -19,10 +19,12 @@ public class MainPhone {
         Phone phone6=new Phone("25674","Lg");
         Phone phone7=new Phone("17648","Huawei");
 
+      // Phone.showDataBase();
         Phone.isNumberExist("00000");
         Phone.isNumberExist("12345");
 
         Phone.getRandomPhone();
+
 
 
     }

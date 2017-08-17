@@ -22,24 +22,25 @@ public class Phone {
     private String mark;
     private static int countOfUsers=0;
 
-    private Phone(String number){
-           myNumber=number;
+  //  private Phone(String number){
+   //        myNumber=number;
 
-    }
+   // }
     public Phone(String number,String markOfSelphone){   // Конструктор
         countOfUsers+=1;
-        for (int i = 0; i <phones.length ; i++) {
+       for (int i = 0; i <phones.length ; i++) {
          if(phones[i]==null){
              myNumber=number;
              mark=markOfSelphone;
-             phones[i]=new Phone(number);
-             phones[i].mark=markOfSelphone;
-             break;
+             phones[i]=this;
+             // phones[i]=new Phone(number);
+            // phones[i].mark=markOfSelphone;
+            break;
          }
-        }if(countOfUsers>10){
+       }if(countOfUsers>10){
             System.out.println("There are no place");
         }
-    }
+   }
     public String getMyNumber() {
         System.out.println("number: "+myNumber);
         return myNumber;
@@ -80,5 +81,14 @@ public class Phone {
             phones[random].call(phones[random2].myNumber);
         }else{getRandomPhone();}
         return random;
+    }
+
+    public static void showDataBase(){
+        for (int i = 0; i <phones.length ; i++) {
+            if(phones[i]!=null) {
+                System.out.print(phones[i].myNumber + ", ");
+                System.out.println(phones[i].mark);
+            }
+        }
     }
 }
