@@ -80,6 +80,7 @@ public class Car {
     public void addHuman(int count){
         this.countHuman+=count;
     }
+
     public void start(){
         if(!start) {
             System.out.println("Авто:" + number + " завелось.");
@@ -95,8 +96,17 @@ public class Car {
 
             public void move(){
         if(!move&&start){
-            System.out.println("Авто: "+number+" поехало.");
-            move=true;
+            if(track!=null){
+                move = true;
+                stop = false;
+                track.roll = true;
+                track.stop = false;
+                System.out.println("Авто: "+number+" поехало вместе с прицепом: "+track.number);
+            }else {
+                System.out.println("Авто: " + number + " поехало.");
+                stop = false;
+                move = true;
+            }
         } else if(move){
             System.out.println("Авто: "+number+" не могу ехать, так как уже еду.");
         }else if(!start){
@@ -105,11 +115,20 @@ public class Car {
             }
 
             public void stop(){
-                if(start){
-                    System.out.println("Авто: "+number+" остановилась и выключила двигатель.");
-                    stop=true;
-                    start=false;
-                    move=false;
+                if(start&&move){
+                    if (track != null) {
+                        System.out.println("Авто: "+number+" вместе с прицепом: "+track.number+" остановилось и выключело двигатель.");
+                        stop=true;
+                        start=false;
+                        move=false;
+                        track.stop = true;
+                        track.roll = false;
+                    }else {
+                        System.out.println("Авто: " + number + " остановилась и выключила двигатель.");
+                        stop = true;
+                        start = false;
+                        move = false;
+                    }
                 } else if(!move&&start){
                     System.out.println("Авто: "+number+" не может остановиться так как заведенная стоит.");
                 } else if(!start){
