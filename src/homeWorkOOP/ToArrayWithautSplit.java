@@ -56,6 +56,6 @@ public class ToArrayWithautSplit {
 
     public static void main(String[] args) {
 
-        new ToArrayWithautSplit().mySplit("abcd fgh            fgh","dfre asdfsaf       asdfasfdasf  adfg      ");
+        new ToArrayWithautSplit().mySplit(" ","dfre asdfsaf            asdfasfdasf  adfg                                         ");
     }
 }
