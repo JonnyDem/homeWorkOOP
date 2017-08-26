@@ -2,6 +2,10 @@ package homeWorkOOP.autosalon;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+/*
+   Тема: Консольное меню
+    Задача на дом (стр 38-39 в брошуре (долго описывать))
+ */
 
 public class AutoSalon {
 
