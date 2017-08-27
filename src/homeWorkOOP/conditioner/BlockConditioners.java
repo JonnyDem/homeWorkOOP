@@ -27,10 +27,10 @@ public class BlockConditioners {
         public int setTemperature() {
             Scanner scan=new Scanner(System.in);
             System.out.println("Select temperature from 5 to 27");
-            int temperature=scan.nextInt();
-            if(temperature>=5&&temperature<=27) {
+            int temperature = scan.nextInt();
+            if (temperature >= 5 && temperature <= 27) {
                 this.temperature = temperature;
-                System.out.println("The temperature is set on "+temperature+" degrees.");
+                System.out.println("The temperature is set on " + temperature + " degrees.");
                 return temperature;
             } else {
                 return setTemperature();

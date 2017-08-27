@@ -11,14 +11,14 @@ public class MainConditioner {
 
     public static void main(String[] args) {
         BlockConditioners blockConditioners = new BlockConditioners();
-        boolean runWhile=true;
-        Scanner scan=new Scanner(System.in);
+        boolean runWhile = true;
+        Scanner scan = new Scanner(System.in);
         while(runWhile) {
             System.out.println("Select operation");
             for(String s:menuList){
                 System.out.println(s);
             }
-            int operation=scan.nextInt();
+            int operation = scan.nextInt();
             switch (operation){
                 case 1:
                     int count=0;
@@ -32,19 +32,19 @@ public class MainConditioner {
                     break;
                 case 2:
                     System.out.println("Select conditioner you want to turn on.");
-                    int condTurnOn=scan.nextInt();
+                    int condTurnOn = scan.nextInt();
                     BlockConditioners.conditioners.get(condTurnOn).turnOn();
                     System.out.println();
                     break;
                 case 3:
                     System.out.println("Select conditioner you want to turn off.");
-                    int condTurnOff=scan.nextInt();
+                    int condTurnOff = scan.nextInt();
                     BlockConditioners.conditioners.get(condTurnOff).turnOf();
                     System.out.println();
                     break;
                 case 4:
                     System.out.println("Select conditioner you want to set the temperature.");
-                    int condSetTemperature=scan.nextInt();
+                    int condSetTemperature = scan.nextInt();
                     BlockConditioners.conditioners.get(condSetTemperature).setTemperature();
                     System.out.println();
                     break;
