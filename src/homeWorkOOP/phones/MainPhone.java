@@ -10,7 +10,7 @@ public class MainPhone {
    static List<Phone> list=new ArrayList<>();
 
     public static void main(String[] args) {
-        //List<Phone> list=new ArrayList<>();
+
         list.add(new Nokia("11111",false,7));
         list.add(new Samsung("11122",true,3));
         list.add(new IPhone4("22222",true,5,12));
@@ -34,7 +34,6 @@ public class MainPhone {
       }
   }
   public static void printAllAppleId(){
-      Iterator<Phone>iterator=list.iterator();
       for(Object o:list){
               if(o instanceof IPhone){
                   ((IPhone) o).printAppleId();
