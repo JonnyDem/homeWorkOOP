@@ -5,7 +5,7 @@ package homeWorkOOP.taskpage53;
  */
 public abstract class AbstractTable implements Tablable {
 
-    boolean dry;
+    boolean dry = true;
 
     @Override
     public boolean isDry() {

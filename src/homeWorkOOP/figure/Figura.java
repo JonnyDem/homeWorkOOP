@@ -9,13 +9,13 @@ package homeWorkOOP.figure;
  *                                             - Подумать над иерархией наследования кто от кого должен наследоваться
  *                                               (Квадрат от прямоугольника или наоборот.)
  */
-public class Figura {
+public abstract class Figura {
 
     private double xPos;
     private double yPos;
     private double sideA;
 
-    public Figura(){
+    public  Figura(){
     }
 
     public Figura(double xPos, double yPos, double sideA) {
@@ -40,7 +40,7 @@ public class Figura {
         return xPos;
     }
 
-    public double getyPos() {
+    public  double getyPos() {
         return yPos;
     }
 }

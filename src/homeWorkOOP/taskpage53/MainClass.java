@@ -16,6 +16,8 @@ public class MainClass {
 
        addHumanToArray();
        addTableToList();
+
+
         putRandomGlasses();
         System.out.println();
         printAboutAllHuman();
@@ -60,6 +62,7 @@ public class MainClass {
     private static void addTableToList() {
         for (int i = 1; i <=10 ; i++) {
            tables.put(i,new Table());
+            System.out.println(tables.get(i).isDry());
         }
     }
 

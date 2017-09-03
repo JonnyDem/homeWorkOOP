@@ -29,7 +29,7 @@ public abstract class AbstractHuman implements Humanable {
 
     @Override
     public void pourWaterOnTable(AbstractTable table) {
-        table.dry=true;
+        table.dry=false;
     }
 
     @Override

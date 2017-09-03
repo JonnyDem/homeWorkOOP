@@ -24,6 +24,7 @@ public class Triangle extends Figura {
         return (getSideA() * sideB) / 2;
     }
 
+
     public double getSideB() {
         return sideB;
     }
